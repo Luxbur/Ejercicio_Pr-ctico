@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ffe0f0, #f5e6ff);
+    color: #4b2c54;
+    padding: 2rem;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #b84e91;
+}
+
+/* Botones */
+button {
+    background-color: #ffb6c1;
+    color: #4b2c54;
+    border: none;
+    border-radius: 12px;
+    padding: 0.6rem 1.2rem;
+    margin: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff99b8;
+}
+
+/* Contenedor de tabla y mensajes */
+#productosContainer, #mensaje {
+    margin-top: 1.5rem;
+    background-color: #fff0f5;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Tabla de productos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+th {
+    background-color: #f8c8dc;
+    color: #4b2c54;
+}
+
+td {
+    background-color: #fff0f5;
+    color: #4b2c54;
+}
+
+/* Formulario */
+form {
+    background-color: #fdf2f8;
+    border: 1px solid #f9d3e3;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    color: #d15b8f;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #4b2c54;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #f9d3e3;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #4b2c54;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff99b8;
+    box-shadow: 0 0 5px #ffc0cb80;
+}
+
+/* Mensajes */
+#mensaje {
+    text-align: center;
+    font-weight: bold;
+    color: #b84e91;
+}
+
+/* Estilo para pre */
+pre {
+    background-color: #fce4ec;
+    padding: 1rem;
+    border-radius: 12px;
+    color: #4b2c54;
+    margin-top: 1rem;
+    white-space: pre-wrap;
+}
