@@ -44,6 +44,14 @@ function mostrarProducto(id) {
     .catch(err => console.error("Error al obtener producto:", err));
 }
 
+// Función para agregar producto desde el formulario
+        function agregarProductoDesdeFormulario() {
+            let nombre = document.getElementById('nombreProducto').value;
+            let descripcion = document.getElementById('descripcionProducto').value;
+            let precio = parseFloat(document.getElementById('precioProducto').value);
+            agregarProducto(nombre, descripcion, precio);
+        }
+
 // Agregar un producto nuevo (POST)
 function agregarProducto(nombre, descripcion, precio) {
   fetch(API_URL, {
@@ -52,10 +60,7 @@ function agregarProducto(nombre, descripcion, precio) {
     body: JSON.stringify({ nombre, descripcion, precio })
   })
     .then(res => res.json()) // Convierte la respuesta a JSON
-    then(data => {
-      console.log("Producto agregado:", data); // Muestra el resultado en consola
-      mostrarMensaje();
-    })
+    then(listarProductos())
     .catche(err => console.error("Error al agregar producto:", err));
 }
 
@@ -69,7 +74,6 @@ function modificarProducto(id, nombre, descripcion, precio) {
     .then(res => res.json())
     .then(data => {
         console.log("Producto modificado:", data);
-        mostrarMensaje(data.mensaje || data.error);
         listarProductos(); // Actualizar la lista de productos
     })
     .catch(err => console.error("Error al modificar producto:", err));
